@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+        // write a function called getComputerChoice that will randomly return either 'rock', 'paper', or 'scissors'
+        function getComputerChoice()
+        {
+            function getRandomInt(max)
+            {
+                return Math.floor(Math.random()*max);
+            }
+            let choice = getRandomInt(3);
+
+            // if (choice == 0) choice = "Rock";
+            // if (choice == 1) choice =  "Paper";
+            // if (choice == 2) choice =  "Scissors";
+
+            return choice;
+        }
+        let computerSelection = getComputerChoice();
+        let playerSelection = prompt('Type "Rock", "Paper", or "Scissors"').toLowerCase();
+            if (playerSelection == "rock") playerSelection = 0;
+            if (playerSelection == "paper") playerSelection = 1;
+            if (playerSelection == "scissors") playerSelection = 2;
+            // else playerSelection =
+
+        function playRound(playerSelection, computerSelection)
+        {
+            if(playerSelection == 0 && computerSelection == 2) console.log("Rock beats Scissors. You Win!");
+            if(playerSelection == 0 && computerSelection == 1) console.log("Paper beats Rock. You Lose!");
+            if(playerSelection == 0 && computerSelection == 0) console.log("It's a Tie!");
+
+            if(playerSelection == 1 && computerSelection == 0) console.log("Paper beats Rock. You Win!");
+            if(playerSelection == 1 && computerSelection == 2) console.log("Scissors beats Paper. You Lose!");
+            if(playerSelection == 1 && computerSelection == 1) console.log("It's a Tie!");
+
+            if(playerSelection == 2 && computerSelection == 1) console.log("Scissors beats Paper. You Win!");
+            if(playerSelection == 2 && computerSelection == 0) console.log("Rock beats Scissors. You Lose!");
+            if(playerSelection == 2 && computerSelection == 2) console.log("It's a Tie!");
+        }
+        console.log(playRound())
+    </script>
+    </body>
+</html>
