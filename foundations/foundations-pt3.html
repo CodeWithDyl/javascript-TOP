@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+        //write a finction called add7 that takes one number and returns that number + 7
+
+        function add7(num){
+            let sum = num + 7;
+            return sum;
+        }
+        console.log(add7(5))
+        //write a function called multiply that takes 2 numbers and returns their product
+
+        function multiply(num1, num2){
+            let product = num1 * num2;
+            return product;
+        }
+        console.log(multiply(5, 10))
+        //write a function called capitalize that takes a string and returns that string with only the first letter capitalized
+
+        function capitalize(word){
+            let firstLetter = word.charAt(0).toUpperCase();
+            let lowercase = word.toLowerCase().slice(1);
+            let capitalize = firstLetter + lowercase;
+            return capitalize;
+        }
+        console.log(capitalize("dylan"))
+        //write a function called lastLetter that takes a string and returns the very last letter of that string
+
+        function lastLetter(string){
+            let lastLetter = string.slice(string.length-1);
+            return lastLetter;
+
+        }
+        console.log(lastLetter("wonderbread"))
+    </script>
+    </body>
+</html>
