@@ -4,59 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="app.js" defer></script>
+        <link rel='stylesheet' href="style.css">
     </head>
     <body>
-
-        <script>
-
-        // write a function called getComputerChoice that will randomly return either 'rock', 'paper', or 'scissors'
-        function getComputerChoice()
-        {
-            function getRandomInt(max)
-            {
-                return Math.floor(Math.random()*max);
-            }
-            let choice = getRandomInt(3);
-
-            // if (choice == 0) choice = "Rock";
-            // if (choice == 1) choice =  "Paper";
-            // if (choice == 2) choice =  "Scissors";
-
-            return choice;
-        }
-        let computerSelection = getComputerChoice();
-        let playerSelection = prompt('Type "Rock", "Paper", or "Scissors"').toLowerCase();
-            if (playerSelection == "rock") playerSelection = 0;
-            if (playerSelection == "paper") playerSelection = 1;
-            if (playerSelection == "scissors") playerSelection = 2;
-            // else playerSelection =
-
-        function playRound(playerSelection, computerSelection)
-        {
-            if(playerSelection == 0 && computerSelection == 2) console.log("Rock beats Scissors. You Win!");
-            if(playerSelection == 0 && computerSelection == 1) console.log("Paper beats Rock. You Lose!");
-            if(playerSelection == 0 && computerSelection == 0) console.log("It's a Tie!");
-
-            if(playerSelection == 1 && computerSelection == 0) console.log("Paper beats Rock. You Win!");
-            if(playerSelection == 1 && computerSelection == 2) console.log("Scissors beats Paper. You Lose!");
-            if(playerSelection == 1 && computerSelection == 1) console.log("It's a Tie!");
-
-            if(playerSelection == 2 && computerSelection == 1) console.log("Scissors beats Paper. You Win!");
-            if(playerSelection == 2 && computerSelection == 0) console.log("Rock beats Scissors. You Lose!");
-            if(playerSelection == 2 && computerSelection == 2) console.log("It's a Tie!");
-        }
-        console.log(playRound(playerSelection, computerSelection));
-
-
-        //TODO
-        //Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
-        // You have not officially learned how to “loop” over code to repeat function calls… if you already know about loops from somewhere else (or if you feel like doing some more learning) feel free to use them. If not, don’t worry! Just call your playRound function 5 times in a row. Loops are covered in the next lesson.
-        // At this point you should be using console.log() to display the results of each round and the winner at the end.
-        // Use prompt() to get input from the user. Read the docs here if you need to.
-        // Feel free to re-work your previous functions if you need to. Specifically, you might want to change the return value to something more useful.
-        // Feel free to create more “helper” functions if you think it would be useful.
-
-        
-    </script>
+        <div id="container">
+            <button id="0">ROCK</button>
+            <button id="1">PAPER</button>
+            <button id="2">SCISSORS</button>
+        </div>
+        <div id="container">
+            <div id="playerScoreContainer"></div>
+            <div id="computerScoreContainer"></div>
+        </div>
     </body>
 </html>
